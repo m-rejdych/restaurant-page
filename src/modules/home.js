@@ -1,8 +1,9 @@
-export default (function() {
+export default function() {
     const content = document.getElementById(`content`);
     const homeDiv = document.createElement(`div`);
-
+    
     function createHome() {
+
         homeDiv.setAttribute(`id`, `homeDiv`);
 
         const restaurantName = document.createElement(`h1`);
@@ -17,5 +18,5 @@ export default (function() {
         content.appendChild(homeDiv);
     }
 
-    return { loadHome };
-})();
+    return loadHome();
+};
