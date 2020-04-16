@@ -1,5 +1,6 @@
 import loadHome from './home.js';
 import loadMenu from './menu.js';
+import loadContact from './contact.js';
 import clear from './clear.js';
 
 export default function() {
@@ -29,6 +30,10 @@ export default function() {
         const contactTab = document.createElement(`h3`);
         contactTab.setAttribute(`id`, `contactTab`);
         contactTab.textContent = `Contact`;
+        contactTab.addEventListener(`click`, () => {
+            clear();
+            loadContact();
+        })
 
         nav.appendChild(menuTab);
         nav.appendChild(homeTab);
