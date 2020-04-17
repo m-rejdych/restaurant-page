@@ -1,6 +1,4 @@
-export default function() {
-    const content = document.getElementById(`content`);
-    
+export default function() {    
     let child = content.lastElementChild;
     while(child) {
         content.removeChild(child);

@@ -1,8 +1,6 @@
-export default function() {
-    const content = document.getElementById(`content`);
+export default function createContactDiv() {
     const contactDiv = document.createElement(`div`);
 
-    function createContactDiv() {
         contactDiv.setAttribute(`id`, `contactDiv`);
 
 
@@ -85,15 +83,9 @@ export default function() {
             createButton();
 
             contactDiv.appendChild(contactForm);
+
+            content.appendChild(contactDiv);
         }
 
         return create();
-    }
-
-    function loadMenu() {
-        createContactDiv();
-        content.appendChild(contactDiv);
-    }
-
-    return loadMenu();
 }
